@@ -1,0 +1,18 @@
+# Yeni — Haftalık AI Projeleri
+
+Her hafta burada küçük, kullanışlı ve çalıştırılabilir bir AI odaklı proje yayınlanır. Projeler bağımsızdır; önceki çalışmalar korunur.
+
+## Projeler
+
+| Tarih | Proje | Kısa açıklama |
+| --- | --- | --- |
+| 2026-10-25 | [RAG Context Chunker](projects/2026-10-25-rag-context-chunker/) | Dokümanları RAG/LLM bağlamı için örtüşmeli, JSON uyumlu parçalara ayıran bağımlılıksız CLI. |
+
+## Yapı
+
+```text
+projects/
+  YYYY-MM-DD-proje-adi/
+```
+
+Her proje kendi kurulum, kullanım ve doğrulama yönergelerini içerir.

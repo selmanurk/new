@@ -6,6 +6,7 @@ Her hafta burada küçük, kullanışlı ve çalıştırılabilir bir AI odaklı
 
 | Tarih | Proje | Kısa açıklama |
 | --- | --- | --- |
+| 2026-11-01 | [Prompt Risk Scanner](projects/2026-11-01-prompt-risk-scanner/) | Güvenilmeyen metindeki prompt-injection sinyallerini çevrimdışı tarayan CLI. |
 | 2026-10-25 | [RAG Context Chunker](projects/2026-10-25-rag-context-chunker/) | Dokümanları RAG/LLM bağlamı için örtüşmeli, JSON uyumlu parçalara ayıran bağımlılıksız CLI. |
 
 ## Yapı

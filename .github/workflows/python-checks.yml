@@ -16,3 +16,5 @@ jobs:
         run: python3 projects/2026-10-25-rag-context-chunker/test_context_chunker.py
       - name: Run Prompt Risk Scanner tests
         run: python3 projects/2026-11-01-prompt-risk-scanner/test_prompt_risk_scanner.py
+      - name: Run LLM PII Redactor tests
+        run: python3 projects/2026-11-08-llm-pii-redactor/test_pii_redactor.py

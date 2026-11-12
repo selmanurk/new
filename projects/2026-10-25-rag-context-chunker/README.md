@@ -1,22 +1,22 @@
 # RAG Context Chunker
 
-Düz metin belgelerini LLM/RAG akışlarına uygun, örtüşmeli JSON parçalara ayıran bağımlılıksız Python komut satırı aracı.
+A dependency-free Python command-line tool that splits plain-text documents into overlapping, JSON-ready chunks for RAG and LLM workflows.
 
-## Gereksinimler
+## Requirements
 
 - Python 3.10+
-- Harici paket gerekmez
+- No external packages
 
-## Kullanım
+## Usage
 
 ```bash
 cd projects/2026-10-25-rag-context-chunker
-python3 context_chunker.py belge.txt --max-chars 1200 --overlap-chars 160 --output chunks.json
+python3 context_chunker.py document.txt --max-chars 1200 --overlap-chars 160 --output chunks.json
 ```
 
-Çıktı, her parça için `id`, metin, karakter sayısı ve yaklaşık token tahmini içerir. `--output` kullanılmazsa JSON standart çıktıya yazılır.
+The output contains an `id`, text, character count, and estimated token count for every chunk. Without `--output`, the JSON is written to standard output.
 
-## Doğrulama
+## Verification
 
 ```bash
 cd projects/2026-10-25-rag-context-chunker

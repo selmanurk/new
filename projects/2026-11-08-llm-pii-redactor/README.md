@@ -1,34 +1,34 @@
 # LLM PII Redactor
 
-Bir metni LLM'e göndermeden önce sık karşılaşılan kişisel verileri yer tutucularla değiştiren, bağımlılıksız Python komut satırı aracı.
+A dependency-free Python command-line tool that replaces common personally identifiable information with placeholders before text is sent to an LLM.
 
-Desteklenen sinyaller:
+Supported signals:
 
-- E-posta adresleri
-- Yaygın telefon numarası biçimleri
-- Uzun kart numarası benzeri sayı dizileri
+- Email addresses
+- Common phone-number formats
+- Long card-number-like digit sequences
 
-Yer tutucular (`[EMAIL_1]`, `[PHONE_1]` gibi) aynı metin içindeki referansları takip etmeyi kolaylaştırır. Araç regex tabanlıdır; güvenlik garantisi değildir. Hassas içeriği paylaşmadan önce çıktıyı mutlaka gözden geçirin.
+Placeholders such as `[EMAIL_1]` and `[PHONE_1]` make references easy to follow within the same text. This is a regex-based utility, not a security guarantee; always review the output before sharing sensitive information.
 
-## Gereksinimler
+## Requirements
 
 - Python 3.10+
-- Harici paket gerekmez
+- No external packages
 
-## Kullanım
+## Usage
 
 ```bash
 cd projects/2026-11-08-llm-pii-redactor
 python3 pii_redactor.py customer-note.txt --output sanitized.json
 ```
 
-`sanitized.json`, temizlenmiş metni, tür bazında redaksiyon sayılarını ve toplam redaksiyon sayısını içerir. `--output` kullanılmadığında JSON standart çıktıya yazılır.
+`sanitized.json` contains the redacted text, redaction counts by type, and the total redaction count. Without `--output`, the JSON is written to standard output.
 
-## Doğrulama
+## Verification
 
 ```bash
 cd projects/2026-11-08-llm-pii-redactor
 python3 -m unittest -v
 ```
 
-Testler e-posta, telefon, kart numarası benzeri diziler, ardışık yer tutucular ve normal metnin korunmasını kapsar.
+The tests cover email addresses, phone numbers, card-number-like sequences, sequential placeholders, and preservation of ordinary text.

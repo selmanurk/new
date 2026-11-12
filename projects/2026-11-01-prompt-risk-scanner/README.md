@@ -1,35 +1,35 @@
 # Prompt Risk Scanner
 
-LLM'e göndermeden önce güvenilmeyen metinlerde yaygın prompt-injection sinyallerini arayan, çevrimdışı ve bağımlılıksız bir Python CLI.
+An offline, dependency-free Python CLI that looks for common prompt-injection signals in untrusted text before it is sent to an LLM.
 
-Araç şu sinyalleri işaretler:
+It flags:
 
-- Önceki/sistem talimatlarını geçersiz kılma girişimleri
-- Parola, token, API anahtarı veya kimlik bilgisi talepleri
-- Ayrıcalıklı rol taklidi
-- Veri ya da konuşma geçmişini dışarı gönderme istekleri
+- Attempts to override prior or system instructions
+- Requests for passwords, tokens, API keys, or credentials
+- Impersonation of privileged roles
+- Requests to move data or conversation history outside the task
 
-Bu bir güvenlik kararı değildir: sezgisel uyarılar üretir. Her zaman güvenilmeyen içeriği gözden geçirin ve araç yetkilerini en az ayrıcalıkla sınırlandırın.
+This is not a security decision engine—it produces heuristic warnings. I recommend reviewing all untrusted content and applying least-privilege tool access.
 
-## Gereksinimler
+## Requirements
 
 - Python 3.10+
-- Harici paket gerekmez
+- No external packages
 
-## Kullanım
+## Usage
 
 ```bash
 cd projects/2026-11-01-prompt-risk-scanner
 python3 prompt_risk_scanner.py untrusted-prompt.txt --output risk-report.json
 ```
 
-Çıktı JSON biçimindedir: risk seviyesi, bulgu sayısı, kural adı, kısa eşleşme ve karakter konumu içerir. `--output` verilmezse JSON standart çıktıya yazılır.
+The JSON output includes the risk level, finding count, rule name, a short match excerpt, and character positions. Without `--output`, the JSON is written to standard output.
 
-## Doğrulama
+## Verification
 
 ```bash
 cd projects/2026-11-01-prompt-risk-scanner
 python3 -m unittest -v
 ```
 
-Testler zararsız metni, her bir temel risk sinyalini ve çoklu bulgulu yüksek-risk sınıflandırmasını kontrol eder.
+The tests cover benign text, each core risk signal, and high-risk classification for multiple findings.

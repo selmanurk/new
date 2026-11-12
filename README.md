@@ -1,20 +1,20 @@
-# Yeni — Haftalık AI Projeleri
+# Weekly AI Projects
 
-Her hafta burada küçük, kullanışlı ve çalıştırılabilir bir AI odaklı proje yayınlanır. Projeler bağımsızdır; önceki çalışmalar korunur.
+I publish a small, useful, and runnable AI-focused project here every week. Each project is independent, and I keep all previous projects available.
 
-## Projeler
+## Projects I Published
 
-| Tarih | Proje | Kısa açıklama |
+| Date | Project | Summary |
 | --- | --- | --- |
-| 2026-11-08 | [LLM PII Redactor](projects/2026-11-08-llm-pii-redactor/) | LLM'e gönderimden önce e-posta, telefon ve kart numarası benzeri verileri yer tutucularla gizleyen CLI. |
-| 2026-11-01 | [Prompt Risk Scanner](projects/2026-11-01-prompt-risk-scanner/) | Güvenilmeyen metindeki prompt-injection sinyallerini çevrimdışı tarayan CLI. |
-| 2026-10-25 | [RAG Context Chunker](projects/2026-10-25-rag-context-chunker/) | Dokümanları RAG/LLM bağlamı için örtüşmeli, JSON uyumlu parçalara ayıran bağımlılıksız CLI. |
+| 2026-11-08 | [LLM PII Redactor](projects/2026-11-08-llm-pii-redactor/) | A CLI that masks email addresses, phone numbers, and card-number-like values with placeholders before text is sent to an LLM. |
+| 2026-11-01 | [Prompt Risk Scanner](projects/2026-11-01-prompt-risk-scanner/) | An offline CLI that scans untrusted text for common prompt-injection signals. |
+| 2026-10-25 | [RAG Context Chunker](projects/2026-10-25-rag-context-chunker/) | A dependency-free CLI that splits documents into overlapping, JSON-ready chunks for RAG and LLM context. |
 
-## Yapı
+## Repository Layout
 
 ```text
 projects/
-  YYYY-MM-DD-proje-adi/
+  YYYY-MM-DD-project-name/
 ```
 
-Her proje kendi kurulum, kullanım ve doğrulama yönergelerini içerir.
+Every project includes its own setup, usage, and verification instructions.
